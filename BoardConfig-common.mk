@@ -78,6 +78,30 @@ TARGET_NO_KERNEL := false
 BOARD_USES_RECOVERY_AS_BOOT := true
 BOARD_USES_METADATA_PARTITION := true
 
+# Board uses A/B OTA.
+AB_OTA_UPDATER := true
+
+AB_OTA_PARTITIONS += \
+    boot \
+    system \
+    vbmeta \
+    dtbo \
+    vendor
+
+# Skip product partition for nodap build
+ifeq ($(filter %_nodap,$(TARGET_PRODUCT)),)
+AB_OTA_PARTITIONS += \
+    product
+endif
+
+ifneq ($(filter %_mainline,$(TARGET_PRODUCT)),)
+# TODO (b/136154856) product_services partition is removed from
+# AB_OTA_PARTITIONS. Instead, we will add system_ext once it is ready.
+AB_OTA_PARTITIONS += \
+    vbmeta_system \
+
+endif
+
 # Partitions (listed in the file) to be wiped under recovery.
 TARGET_RECOVERY_WIPE := device/google/crosshatch/recovery.wipe
 ifneq ($(filter %_mainline,$(TARGET_PRODUCT)),)

@@ -155,29 +155,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.cp_system_other_odex=1
 
-AB_OTA_PARTITIONS += \
-    boot \
-    system \
-    vbmeta \
-    dtbo \
-    vendor
-
-BUILD_WITHOUT_VENDOR := true
-
-# Skip product partition for nodap build
-ifeq ($(filter %_nodap,$(TARGET_PRODUCT)),)
-AB_OTA_PARTITIONS += \
-    product
-endif
-
-ifneq ($(filter %_mainline,$(TARGET_PRODUCT)),)
-# TODO (b/136154856) product_services partition is removed from
-# AB_OTA_PARTITIONS. Instead, we will add system_ext once it is ready.
-AB_OTA_PARTITIONS += \
-    vbmeta_system \
-
-endif
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
