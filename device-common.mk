@@ -127,7 +127,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     CustomDoze\
-    llkd
+    llkd \
+    SystemUIGoogle
 
 DEVICE_PACKAGE_OVERLAYS += device/google/crosshatch/overlay-lineage
 
