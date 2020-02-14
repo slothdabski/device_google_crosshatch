@@ -127,7 +127,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_PACKAGES += \
     CustomDoze\
-    llkd
+    llkd \
+    SystemUIGoogle
 
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.khungtask.enable=false
