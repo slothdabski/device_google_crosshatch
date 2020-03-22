@@ -1,0 +1,26 @@
+[
+  {
+    "remote": "github",
+    "repository": "Havoc-Devices/android_kernel_google_bluecross",
+    "target_path": "kernel/google/bluecross",
+    "revision": "ten"
+  },
+  {
+    "remote": "github",
+    "repository": "DirtyUnicorns/android_vendor_google",
+    "target_path": "vendor/google",
+    "revision": "q10x"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "DirtyUnicorns/android_vendor_images",
+    "target_path": "vendor/images",
+    "revision": "q10x"
+  },
+  {
+    "remote": "gitlab",
+    "repository": "shagbag913/vendor_gapps",
+    "target_path": "vendor/gapps",
+    "revision": "ten"
+  }
+]

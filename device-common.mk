@@ -126,7 +126,11 @@ PRODUCT_COPY_FILES += \
     device/google/crosshatch/qti_whitelist.xml:$(TARGET_COPY_OUT_PRODUCT)/etc/sysconfig/qti_whitelist.xml
 
 PRODUCT_PACKAGES += \
+    CustomDoze\
     llkd
+
+DEVICE_PACKAGE_OVERLAYS += device/google/crosshatch/overlay-lineage
+
 #PRODUCT_PROPERTY_OVERRIDES += \
 #    ro.khungtask.enable=false
 #

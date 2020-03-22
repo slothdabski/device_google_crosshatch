@@ -21,8 +21,8 @@
 # lines, aosp and du, hence its name.
 #
 
-# Include Havoc common configuration
-include vendor/havoc/config/common_full_phone.mk
+# Include Bliss common configuration
+include vendor/bliss/config/common_full_phone.mk
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
@@ -31,19 +31,17 @@ $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := havoc_crosshatch
+PRODUCT_NAME := bliss_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3 XL
 PRODUCT_MANUFACTURER := Google
 
-HAVOC_BUILD_TYPE := Official
+BLISS_BUILDTYPE := OFFICIAL
+BLISS_DEVELOPER := slothdabski
+
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1440
-
-# Maintainer Prop
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.havoc.maintainer=slothdabski
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME="crosshatch" \

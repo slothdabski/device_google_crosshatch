@@ -14,10 +14,9 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/havoc_crosshatch.mk \
-    $(LOCAL_DIR)/aosp_blueline.mk
+PRODUCT_MAKEFILES += \
+    $(LOCAL_DIR)/bliss_crosshatch.mk
 
 COMMON_LUNCH_CHOICES := \
-    havoc_crosshatch-userdebug \
-    aosp_blueline-userdebug
+    bliss_crosshatch-userdebug \
+    bliss_crosshatch-user
