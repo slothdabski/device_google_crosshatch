@@ -24,3 +24,5 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
 BUILD_FINGERPRINT := google/blueline/blueline:10/QQ2A.200501.001.B2/6352890:user/release-keys
 
 $(call inherit-product-if-exists, vendor/google/blueline/blueline-vendor.mk)
+
+$(call inherit-product-if-exists, vendor/gapps/gapps.mk)
