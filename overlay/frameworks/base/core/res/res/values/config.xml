@@ -480,4 +480,7 @@
     -->
     <!-- Allow screen mirroring/miracast -->
     <bool name="config_enableWifiDisplay">true</bool>
+
+    <!-- Whether to use in-built Screen Record service -->
+    <bool name="config_showScreenRecord">true</bool>
 </resources>

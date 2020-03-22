@@ -19,9 +19,11 @@ PRODUCT_MAKEFILES := \
     $(LOCAL_DIR)/aosp_blueline.mk
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/lineage_blueline.mk \
-    $(LOCAL_DIR)/lineage_crosshatch.mk
+    $(LOCAL_DIR)/bliss_blueline.mk \
+    $(LOCAL_DIR)/bliss_crosshatch.mk
 
 COMMON_LUNCH_CHOICES := \
-    aosp_crosshatch-userdebug \
-    aosp_blueline-userdebug
+    bliss_crosshatch-userdebug \
+    bliss_blueline-userdebug \
+    bliss_crosshatch-user \
+    bliss_blueline-user
