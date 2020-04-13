@@ -15,8 +15,8 @@
 #
 
 PRODUCT_MAKEFILES += \
-    $(LOCAL_DIR)/bliss_crosshatch.mk
+    $(LOCAL_DIR)/derp_crosshatch.mk
 
 COMMON_LUNCH_CHOICES := \
-    bliss_crosshatch-userdebug \
-    bliss_crosshatch-user
+    derp_crosshatch-userdebug \
+    derp_crosshatch-user

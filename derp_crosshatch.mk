@@ -21,8 +21,8 @@
 # lines, aosp and du, hence its name.
 #
 
-# Include Bliss common configuration
-include vendor/bliss/config/common_full_phone.mk
+# Include derp common configuration
+include vendor/derp/config/common_full_phone.mk
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
@@ -31,14 +31,13 @@ $(call inherit-product, device/google/crosshatch/aosp_crosshatch.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 
-PRODUCT_NAME := bliss_crosshatch
+PRODUCT_NAME := derp_crosshatch
 PRODUCT_DEVICE := crosshatch
 PRODUCT_BRAND := Google
 PRODUCT_MODEL := Pixel 3 XL
 PRODUCT_MANUFACTURER := Google
 
-BLISS_BUILDTYPE := OFFICIAL
-BLISS_DEVELOPER := slothdabski
+DERP_BUILDTYPE := Official
 
 TARGET_SCREEN_HEIGHT := 2880
 TARGET_SCREEN_WIDTH := 1440
